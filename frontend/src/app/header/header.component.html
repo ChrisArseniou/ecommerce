@@ -1,13 +1,13 @@
-<header class="w-100 h-100 bg-dark px-4 my-shadow d-flex justify-content-between align-items-center">
+<header class="w-100 h-100 px-4 my-shadow d-flex justify-content-between align-items-center" style="background-color: #C0C0C0;">
     <div class="text-light fs-2 fw-bold fst-italic">
-        <span>Shopping Point</span>
+        <span>BuyMore</span>
     </div>
 
     <div class="btn-toolbar" role="toolbar">
         <div class="btn-group btn-group-lg me-3" role="group">
-            <button type="button" class="btn btn-outline-light" routerLink="/home">Home</button>
+            <button type="button" class="btn btn-outline-light" routerLink="/home" style="border-width: 3px; border-color: #F5F5DC;">Home</button>
             <div class="btn-group" role="group">
-                <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">
+                <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" style="border-width: 3px; border-color: #F5F5DC;">
                     Categories
                 </button>
                 <ul class="dropdown-menu fs-5">
@@ -26,22 +26,22 @@
                 </ul>
             </div>
         </div>
-
+    
         <div class="btn-group btn-group-lg me-2" role="group">
             <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#generalmodal"
-                    (click)="openModal('login')" *ngIf="!utilityService.isLoggedIn()">Login</button>
+                    (click)="openModal('login')" *ngIf="!utilityService.isLoggedIn()" style="border-width: 3px; border-color: #F5F5DC;">Login</button>
             <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#generalmodal"
-                    (click)="openModal('register')" *ngIf="!utilityService.isLoggedIn()">Register</button>
-            <button type="button" class="btn btn-outline-light" *ngIf="utilityService.isLoggedIn()">Account</button>
+                    (click)="openModal('register')" *ngIf="!utilityService.isLoggedIn()" style="border-width: 3px; border-color: #F5F5DC;">Register</button>
+            <button type="button" class="btn btn-outline-light" *ngIf="utilityService.isLoggedIn()" style="border-width: 3px; border-color: #F5F5DC;">Account</button>
             <button type="button" class="btn btn-outline-light" routerLink="/cart"
-                    *ngIf="utilityService.isLoggedIn()">
+                    *ngIf="utilityService.isLoggedIn()" style="border-width: 3px; border-color: #F5F5DC;">
                     Cart
-                    <span class="badge bg-warning text-dark">{{cartItems}}</span>
-                </button>
+                    <span class="badge text-dark" style="background-color: #198754;">{{cartItems}}</span>
+            </button>
             <button type="button" class="btn btn-outline-light" routerLink="/orders"
-                    *ngIf="utilityService.isLoggedIn()">Orders</button>
+                    *ngIf="utilityService.isLoggedIn()" style="border-width: 3px; border-color: #F5F5DC;">Orders</button>
             <button type="button" class="btn btn-outline-light" (click)="utilityService.logoutUser()"
-                    *ngIf="utilityService.isLoggedIn()">Logout</button>
+                    *ngIf="utilityService.isLoggedIn()" style="border-width: 3px; border-color: #F5F5DC;">Logout</button>
         </div>
     </div>
 </header>

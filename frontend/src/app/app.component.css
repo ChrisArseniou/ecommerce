@@ -3,4 +3,5 @@ main {
     padding: 1rem;
     min-height: calc(100vh - 8rem);
     z-index: 1;
+    background-color: rgb(255, 255, 255);
 }
